@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meng Yu Ngov</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --link: #2171B5;
+      --text: #333;
+      --muted: #555;
+      --rule: #eee;
+      --maxw: 880px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 32px auto 80px;
+      max-width: var(--maxw);
+      padding: 0 16px;
+      color: var(--text);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 560px) {
+      header { grid-template-columns: 1fr; text-align: center; }
+      header img { width: 200px; margin: 0 auto; }
+    }
+    header img {
+      width: 260px;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    .topline {
+      font-size: 15px;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    /* ---------- SOCIAL ICONS ---------- */
+    .social-links { margin-top: 10px; }
+    .social-links a {
+      display: inline-block;
+      margin-right: 14px;
+      color: var(--link);
+      transition: opacity 0.2s ease;
+    }
+    .social-links a:hover { opacity: 0.7; }
+    .social-links svg {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+    }
+
+    /* ---------- BODY ---------- */
+    section { margin-top: 36px; }
+    h2 {
+      font-size: 20px;
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--rule);
+    }
+    h3 { font-size: 18px; margin: 18px 0 6px; }
+    .paper-title { font-weight: 600; color: var(--link); cursor: pointer; }
+
+    /* meta line under title */
+    .meta {
+      display: block;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    /* ---------- COLLAPSIBLE ABSTRACT ---------- */
+    details {
+      margin-top: 8px;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      border-left: 3px solid var(--rule);
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--link);
+      list-style: none;
+    }
+    details summary::after {
+      content: " ▼";
+      font-size: 0.8em;
+      color: var(--muted);
+    }
+    details[open] summary::after { content: " ▲"; }
+
+    /* Justified abstracts */
+    .abstract {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="images/meng_pic.jpeg" alt="Photo of Meng Yu Ngov" loading="lazy" />
+    <div>
+      <h1>Meng Yu Ngov</h1>
+      <p class="topline">
+        <a href="mailto:meng_yu.ngov@kcl.ac.uk">meng_yu.ngov@kcl.ac.uk</a>
+      </p>
+      <p>
+        PhD Candidate in Economics at King’s Business School, King’s College London.
+        My research focuses on firms, trade, and development, with an emphasis on trade policy, industrial policy, global value chains, and economic development.
+      </p>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <!-- Bluesky -->
+        <a href="https://bsky.app/profile/meng35.bsky.social" target="_blank" aria-label="Bluesky">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 64 64">
+            <path d="M12.7 10.6c5.3 1.7 10.2 7.4 16.3 15.8 1.7 2.4 3.4 4.7 4.5 6.2 1-1.5 2.8-3.9 4.5-6.2 6.1-8.4 11-14.1 16.3-15.8 6.2-2 8.6 3.8 7.6 8.4-1.1 5.4-5.5 11.7-11.7 15.4 8.4-1 16.8 1.6 7.8 13.9-8.5 11.5-15.3 5.3-19.7 0.7-2-2.2-3.4-4.4-4.9-7.1-1.5 2.7-2.9 4.9-4.9 7.1-4.4 4.6-11.2 10.8-19.7-0.7-9-12.3-0.6-14.9 7.8-13.9-6.2-3.7-10.6-10-11.7-15.4-1-4.6 1.4-10.4 7.6-8.4z"/>
+          </svg>
+        </a>
+
+        <!-- Twitter / X -->
+        <a href="https://x.com/MengyuNgov" target="_blank" aria-label="Twitter / X">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.5 11.24h-6.64l-5.195-6.808-5.937 6.808H1.743l7.73-8.873L1.25 2.25h6.75l4.713 6.231 5.53-6.231zm-1.162 17.52h1.832L7.084 4.63H5.117l11.965 15.14z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/meng-yu-ngov-b5b93ab9/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.983 3.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zM2.5 8.75h5v12.75h-5V8.75zm7.75 0h4.8v1.74h.07c.67-1.26 2.3-2.58 4.73-2.58 5.05 0 5.98 3.32 5.98 7.64v8.05h-5v-7.14c0-1.7-.03-3.88-2.37-3.88-2.38 0-2.75 1.86-2.75 3.77v7.25h-5V8.75z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== RESEARCH SECTION ========== -->
+  <section aria-labelledby="research">
+    <h2 id="research">Research</h2>
+    <h3>Working Papers</h3>
+
+    <details>
+      <summary>
+        The Rise of Viet&nbsp;Nam’s Solar Panel Industry: Inputs, FDI, and Spillovers
+        <span class="meta">(with Gaurav Nayyar, Trang Thu Tran, and Pierre-Louis Vézina) • Draft available upon request</span>
+      </summary>
+      <p class="abstract">
+        When countries subsidize the production and innovation of green goods, does it
+        make it easier for others to join their value chains? We explore this question using
+        Viet Nam’s solar panel industry as a case study with firm-to-firm transaction
+        data to map its value chain. We find that Viet Nam imports solar parts and
+        components at substantially lower prices from subsidizing countries: about 30%
+        cheaper than from non-subsidizing countries and nearly 50% cheaper from China,
+        where all key inputs are subsidized. We also find that Chinese FDI firms — which
+        account for around 75% of exports and 50% of jobs among all solar producers —
+        export solar panels about 38% cheaper than other solar panel exporters
+        in Viet Nam. Lastly, we document positive productivity spillovers from Chinese FDI
+        firms to local suppliers of solar panel parts and components in Viet Nam.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        Mobile Broadband and Firm Efficiency: Evidence from Vietnam
+        <span class="meta">(Job Market Paper) • Draft available upon request</span>
+      </summary>
+      <p class="abstract">
+        This paper examines the impact of mobile broadband expansion on firm performance in Vietnam,
+        leveraging the staggered rollout of 3G internet between 2009 and 2015 and panel data from the
+        Vietnam Enterprise Census. Using a difference-in-differences approach, I find that access to 3G
+        increases firm employment by 7.6% and reduces inventory holding costs by 10.4%, indicating improved
+        operational efficiency. Despite rising employment, the total wage bill per employee declines by 10.6%,
+        reflecting cost-cutting responses to heightened competition. As mobile broadband reduces information
+        asymmetry and enhances market transparency, firms face downward pressure on prices and margins.
+        Consistent with this mechanism, I document a 13.5% decline in average prices and a 9.0% reduction
+        in firm markups. Broadband also facilitates global integration, increasing the likelihood of export
+        participation by 14.6 percentage points. Overall, the results underscore the role of digital
+        infrastructure in enhancing firm efficiency, competitiveness, and market access.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        Rule of Origin and Informality in Cambodia
+        <span class="meta">• Draft available upon request</span>
+      </summary>
+      <p class="abstract">
+        This paper investigates the labor-market effects of Rules of Origin (RoO) liberalization in the context
+        of the 2011 reform of the European Union’s Everything But Arms (EBA) scheme, which eased restrictive
+        RoO for Cambodia’s apparel exports by allowing the use of imported fabric in preferential shipments.
+        Using a novel RoO restrictiveness index combined with Cambodia’s Labor Force Survey microdata,
+        I distinguish between extensive informality (employment in unregistered firms) and intensive
+        informality (informal jobs within registered firms). The relaxation of RoO reduced extensive
+        informality by enabling more firms to formalize and participate in export markets, but increased
+        intensive informality as many newly created jobs lacked social-insurance coverage. Complementary
+        firm-level evidence confirms export expansion and employment growth in apparel, while job quality
+        lagged behind. Simplified RoO enhance market access and formalization, but do not automatically
+        improve job quality without strong domestic labor institutions.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        Driving Change: Local Content Policies in Indonesia’s Automotive Industry
+        <span class="meta">(with Johan Kasim) • Work in progress</span>
+      </summary>
+      <p class="abstract">
+        This study examines the impact of Indonesia’s Local Content Requirements (LCRs) on the development
+        of its upstream automotive industry. Using firm-level data from the Indonesia Industrial Survey
+        (2001–2012), plant–product data (2001–2008), and input–output tables, the analysis employs
+        propensity-score matching combined with difference-in-differences to estimate treatment effects.
+        LCRs increased output, value added, input use, and productivity, with stronger effects for smaller
+        and less-productive firms, as well as those positioned further upstream in the supply chain. LCRs
+        enhanced the export competitiveness of high-complexity spare parts while providing protection to
+        less-competitive firms. These results highlight LCRs’ role in supporting upgrading and competitiveness,
+        while raising questions about broader efficiency and consumer impacts.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        Export Restrictions and Trade in Critical Mineral Goods for the Green Transition
+        <span class="meta">(with Shraddha Gautam and Kumuthini Sivathas) • Forthcoming: Jean Monnet Centre of Excellence in Trade & Environment • Policy paper</span>
+      </summary>
+      <p class="abstract">
+        Critical minerals are essential inputs for green technologies that underpin the transition to sustainable
+        energy. Export restrictions on these minerals raise global prices by constraining supply, reducing material
+        availability, and disrupting international markets and supply chains. Using an event-study approach,
+        we quantify the trade effects of export restrictions on critical-mineral green products, drawing on the
+        concept of product relationship stickiness. Covering restrictions imposed between 2007 and 2023 and
+        combining data from the Global Trade Alert, ADB–WTO Trade in Critical Minerals (TiCM), and CEPII-BACI,
+        we identify 242 green-transition products based on critical minerals. On average, export restrictions
+        reduce exported quantities by ~11.8%. For high-stickiness raw materials, trade declines by ~30%,
+        indicating pronounced disruption to global supply chains.
+      </p>
+    </details>
+
+  </section>
+
+  <footer>
+    © <span id="y">2025</span> Meng Yu Ngov
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+fix the entire code
